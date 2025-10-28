@@ -211,5 +211,7 @@ def get_config():
 
 
 if __name__ == '__main__':
-    # Run on port 5001 to avoid conflicts
-    app.run(host='0.0.0.0', port=5001, debug=False)
+    # Run on port from environment variable (Cloud Run) or default to 5001
+    import os
+    port = int(os.environ.get('PORT', 5001))
+    app.run(host='0.0.0.0', port=port, debug=False)
