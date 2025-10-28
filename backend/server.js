@@ -18,6 +18,7 @@ const jobRoutes = require('./routes/jobs');
 const candidateRoutes = require('./routes/candidates');
 const calendarRoutes = require('./routes/calendar');
 const dashboardRoutes = require('./routes/dashboard');
+const aiRoutes = require('./routes/ai');
 
 const app = express();
 // Cloud Run automatically sets PORT environment variable
@@ -74,6 +75,7 @@ app.use('/api/jobs', jobRoutes);
 app.use('/api/candidates', candidateRoutes);
 app.use('/api/calendar', calendarRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/ai', aiRoutes);
 
 // Root route
 app.get('/', (req, res) => {
