@@ -1,0 +1,32 @@
+{
+  "name": "aitf-auth-backend",
+  "version": "1.0.0",
+  "description": "Backend for AITF authentication system",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.17.2",
+    "@slack/web-api": "^7.11.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "google-auth-library": "^10.4.0",
+    "googleapis": "^161.0.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.7",
+    "pdf-parse": "^2.3.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "supertest": "^7.1.4"
+  }
+}
