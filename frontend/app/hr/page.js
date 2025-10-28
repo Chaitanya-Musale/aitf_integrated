@@ -10,7 +10,7 @@ import JobList from '@/components/hr/JobList';
 import JobForm from '@/components/hr/JobForm';
 import CandidateForm from '@/components/hr/CandidateForm';
 import CandidateManagementList from '@/components/hr/CandidateManagementList';
-
+import AIAnalysis from '@/components/hr/AIAnalysis';
 import ExistingCandidateForm from '@/components/hr/ExistingCandidateForm';
 import Notification from '@/components/hr/Notification';
 import SessionTimeoutWarning from '@/components/SessionTimeoutWarning';
@@ -74,12 +74,15 @@ export default function HRPage() {
     }
     // Switch main section based on query param
     const section = searchParams?.get('section');
-    if (section === 'jobs' || section === 'candidates') {
+    if (section === 'jobs' || section === 'candidates' || section === 'ai') {
       setMainSection(section);
     }
     if (mainSection === 'jobs') {
       loadJobs();
     } else if (mainSection === 'candidates') {
+      loadCandidates();
+    } else if (mainSection === 'ai') {
+      // Load candidates for AI analysis
       loadCandidates();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -411,6 +414,15 @@ export default function HRPage() {
               >
                 Candidate Management
               </button>
+              <button
+                onClick={() => setMainSection('ai')}
+                className={`py-2 px-6 rounded-md text-sm font-medium transition-colors ${mainSection === 'ai'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+                  }`}
+              >
+                AI Analysis
+              </button>
             </div>
 
             <div>
@@ -445,7 +457,7 @@ export default function HRPage() {
             <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg w-full">
               <button
                 onClick={() => setMainSection('jobs')}
-                className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${mainSection === 'jobs'
+                className={`flex-1 py-2 px-2 rounded-md text-xs font-medium transition-colors ${mainSection === 'jobs'
                   ? 'bg-white text-gray-900 shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
                   }`}
@@ -454,12 +466,21 @@ export default function HRPage() {
               </button>
               <button
                 onClick={() => setMainSection('candidates')}
-                className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${mainSection === 'candidates'
+                className={`flex-1 py-2 px-2 rounded-md text-xs font-medium transition-colors ${mainSection === 'candidates'
                   ? 'bg-white text-gray-900 shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
                   }`}
               >
                 Candidates
+              </button>
+              <button
+                onClick={() => setMainSection('ai')}
+                className={`flex-1 py-2 px-2 rounded-md text-xs font-medium transition-colors ${mainSection === 'ai'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+                  }`}
+              >
+                AI
               </button>
             </div>
 
@@ -509,7 +530,7 @@ export default function HRPage() {
             onRefreshJob={handleRefreshJob}
             refreshTrigger={refreshTrigger}
           />
-        ) : (
+        ) : mainSection === 'candidates' ? (
           <CandidateManagementList
             candidates={candidates}
             loading={candidatesLoading}
@@ -527,7 +548,11 @@ export default function HRPage() {
               setShowCandidateManagementForm(true);
             }}
           />
-        )}
+        ) : mainSection === 'ai' ? (
+          <AIAnalysis
+            candidates={candidates}
+          />
+        ) : null}
 
         <JobForm
           show={showJobForm}
