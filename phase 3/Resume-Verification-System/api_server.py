@@ -330,5 +330,7 @@ def generate_markdown_report(results: Dict) -> str:
 
 
 if __name__ == '__main__':
-    # Run on port 5002 to avoid conflicts
-    app.run(host='0.0.0.0', port=5002, debug=False)
+    # Run on port from environment variable (Cloud Run) or default to 5002
+    import os
+    port = int(os.environ.get('PORT', 5002))
+    app.run(host='0.0.0.0', port=port, debug=False)
