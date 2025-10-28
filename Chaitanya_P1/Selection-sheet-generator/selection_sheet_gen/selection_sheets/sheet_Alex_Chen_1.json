@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-15T08:31:15.038266",
+    "candidate_id": 1,
+    "job_id": 1,
+    "application_id": 1,
+    "template_type": "engineering",
+    "model_version": "v2.0",
+    "generator_version": "2.0"
+  },
+  "candidate_info": {
+    "name": "Alex Chen",
+    "email": "alex.chen@email.com",
+    "contact": "+1-555-0101",
+    "current_role": "Senior Software Engineer",
+    "experience_years": 8,
+    "skills": [
+      "Python",
+      "JavaScript",
+      "AWS",
+      "Kubernetes",
+      "PostgreSQL"
+    ],
+    "normalized_skills": [
+      "kubernetes",
+      "postgresql",
+      "javascript",
+      "python",
+      "aws"
+    ],
+    "education": [
+      {
+        "degree": "BS Computer Science",
+        "university": "UC Berkeley",
+        "year": 2016
+      }
+    ],
+    "linkedin_url": "https://linkedin.com/in/alexchen",
+    "github_url": "https://github.com/alexchen",
+    "portfolio_url": null
+  },
+  "job_info": {
+    "title": "Senior Backend Engineer",
+    "role_type": "engineering",
+    "seniority": "senior",
+    "required_skills": [
+      "Python",
+      "AWS",
+      "Kubernetes"
+    ],
+    "nice_to_have_skills": [
+      "Go",
+      "Redis"
+    ],
+    "normalized_required": [
+      "kubernetes",
+      "python",
+      "aws"
+    ]
+  },
+  "analysis": {
+    "executive_summary": "Alex Chen is a Senior Software Engineer with 8 years of experience. Good skill match (72.0%) for Senior Backend Engineer. Alex demonstrates a solid and steady career path, progressing from a Full Stack Developer to a Senior Engineer. This trajectory indicates a consistent growth in technical responsibility and mastery of a modern tech stack over the documented 6 years. Moderate confidence assessment (confidence: 53%). Promising candidate - recommend standard interview process.",
+    "skill_match_score": 72.0,
+    "skill_breakdown": {
+      "required_skills": {
+        "matched": 3,
+        "total": 3,
+        "percentage": 100.0,
+        "matched_skills": [
+          "kubernetes",
+          "python",
+          "aws"
+        ]
+      },
+      "nice_to_have": {
+        "matched": 0,
+        "total": 2,
+        "percentage": 0.0,
+        "matched_skills": []
+      }
+    },
+    "semantic_match": {
+      "score": 10.0,
+      "related_skills": []
+    },
+    "career_trajectory": {
+      "progression_summary": "Alex demonstrates a solid and steady career path, progressing from a Full Stack Developer to a Senior Engineer. This trajectory indicates a consistent growth in technical responsibility and mastery of a modern tech stack over the documented 6 years.",
+      "growth_rate": "steady",
+      "key_transitions": [
+        "Full Stack Developer to Senior Engineer (3 years)"
+      ],
+      "expertise_evolution": "Evolved from a generalist Full Stack Developer role to a Senior Engineer with deeper expertise in backend systems and cloud infrastructure (AWS, Kubernetes). The skill set shows a mature understanding of modern application development and deployment.",
+      "strengths": [
+        "Stable Tenure (3 years per company)",
+        "Clear Upward Progression",
+        "Expertise in a Modern, In-Demand Tech Stack",
+        "Versatility across frontend, backend, and cloud"
+      ],
+      "potential_concerns": [
+        "The first 2 years of the 8-year career history are not detailed.",
+        "No explicit leadership or mentorship experience is mentioned in the roles."
+      ],
+      "tenure_per_role": [
+        {
+          "role": "Senior Engineer",
+          "months": 36
+        },
+        {
+          "role": "Full Stack Developer",
+          "months": 36
+        }
+      ]
+    },
+    "red_flags": [],
+    "rubric_scores": {
+      "overall_score": 66.4,
+      "confidence": 0.53,
+      "criterion_scores": [
+        {
+          "criterion": "technical_depth",
+          "score": 4,
+          "weight": 0.35,
+          "evidence": "Matches 3 required skills",
+          "confidence": 0.7
+        },
+        {
+          "criterion": "problem_solving",
+          "score": 3,
+          "weight": 0.25,
+          "evidence": "",
+          "confidence": 0.5
+        },
+        {
+          "criterion": "system_design",
+          "score": 3,
+          "weight": 0.2,
+          "evidence": "",
+          "confidence": 0.5
+        },
+        {
+          "criterion": "communication",
+          "score": 3,
+          "weight": 0.1,
+          "evidence": "",
+          "confidence": 0.5
+        },
+        {
+          "criterion": "cultural_fit",
+          "score": 3,
+          "weight": 0.1,
+          "evidence": "",
+          "confidence": 0.5
+        },
+        {
+          "criterion": "mentorship",
+          "score": 3,
+          "weight": 0.1,
+          "evidence": "",
+          "confidence": 0.5
+        }
+      ]
+    }
+  },
+  "interview_guide": {
+    "recommended_questions": [
+      {
+        "question": "In Python, discuss the trade-offs between using `asyncio`, multithreading, and multiprocessing for a high-throughput I/O-bound service. Which approach would you choose for a service that consumes from an AWS SQS queue and writes to a database, and how would you deploy and scale it on Kubernetes?",
+        "purpose": "Assesses deep knowledge of Python's concurrency models, their practical application in a cloud-native context, and the ability to make sound architectural decisions considering performance, the GIL, and infrastructure.",
+        "follow_up": "How would you handle graceful shutdowns and ensure no messages are lost when a Kubernetes pod is terminated during scaling or a deployment?",
+        "red_flags": "Confusing threading with multiprocessing; unable to explain the Global Interpreter Lock (GIL) and its impact; generic answers without justifying choices in the context of AWS and Kubernetes.",
+        "category": "technical",
+        "seniority_level": "senior"
+      },
+      {
+        "question": "Describe a time when you had a strong technical disagreement with a colleague or your manager about an architectural choice. How did you approach the disagreement, what was the process for reaching a resolution, and what was the final outcome?",
+        "purpose": "Evaluates communication, collaboration, and negotiation skills. It shows how the candidate handles conflict, whether they can argue their points constructively, and if they prioritize the project's success over being 'right'.",
+        "follow_up": "Looking back, is there anything you would have done differently to make the process smoother?",
+        "red_flags": "Blaming others; showing an inability to compromise or listen to other viewpoints; focusing on personal conflict rather than technical merits; having no examples of significant technical debates.",
+        "category": "behavioral",
+        "seniority_level": "senior"
+      },
+      {
+        "question": "Design a highly available and scalable system for processing and analyzing real-time clickstream data from a popular website. Walk me through the architecture from data ingestion to providing analytics dashboards, detailing your choice of AWS services and how you would deploy stateful and stateless components on Kubernetes.",
+        "purpose": "Assesses the ability to design a complex, distributed system from the ground up. It tests knowledge of event-driven architectures, data pipelines, scalability patterns, and the practical application of AWS services (e.g., Kinesis, Lambda, S3, Redshift) and Kubernetes concepts (e.g., Deployments, StatefulSets).",
+        "follow_up": "How would you ensure exactly-once processing for critical events, and what is your strategy for monitoring the cost of this system?",
+        "red_flags": "A monolithic design; not considering failure modes or data loss; hand-waving key components like data storage or message queues; inability to justify technology choices with clear trade-offs.",
+        "category": "system_design",
+        "seniority_level": "senior"
+      },
+      {
+        "question": "Tell me about a time you proactively identified a significant gap in your team's technical capabilities, processes, or code quality. What was the gap, what steps did you take to address it, and how did you influence your peers to adopt the change?",
+        "purpose": "Evaluates leadership, mentorship, and influence beyond individual contributions. Senior engineers are expected to elevate the entire team, drive best practices, and take ownership of the team's technical excellence.",
+        "follow_up": "How did you measure the impact of your initiative, and what was the most challenging part of getting buy-in from the team?",
+        "red_flags": "Having no examples of improving a team; suggesting changes but not driving their adoption; focusing only on their own code; a lack of awareness of team dynamics and processes.",
+        "category": "leadership",
+        "seniority_level": "senior"
+      },
+      {
+        "question": "You are on-call. An alert fires for a critical Python service running on Kubernetes in AWS. The P99 latency has spiked and there's a small but significant increase in 5xx errors. The issue is intermittent and there have been no recent deployments. What is your step-by-step process to debug this?",
+        "purpose": "Assesses a candidate's systematic approach to troubleshooting complex production issues in a distributed environment. It tests their knowledge of observability tools (metrics, logging, tracing), Kubernetes debugging commands, and their ability to reason under pressure.",
+        "follow_up": "Let's say you suspect the issue is not in the application code but is related to resource contention on the Kubernetes node. How would you investigate that hypothesis?",
+        "red_flags": "Jumping to conclusions without evidence; not having a structured approach (e.g., 'I'd restart it'); unfamiliarity with observability tools or `kubectl` for diagnostics; focusing only on application logs while ignoring infrastructure metrics.",
+        "category": "debugging",
+        "seniority_level": "senior"
+      }
+    ],
+    "evaluation_criteria": {
+      "technical_depth": {
+        "weight": 0.35,
+        "required": true
+      },
+      "problem_solving": {
+        "weight": 0.25,
+        "required": true
+      },
+      "system_design": {
+        "weight": 0.2,
+        "required": true
+      },
+      "communication": {
+        "weight": 0.1,
+        "required": true
+      },
+      "cultural_fit": {
+        "weight": 0.1,
+        "required": true
+      },
+      "mentorship": {
+        "weight": 0.1,
+        "required": false
+      }
+    },
+    "question_categories": {
+      "technical": [
+        {
+          "question": "In Python, discuss the trade-offs between using `asyncio`, multithreading, and multiprocessing for a high-throughput I/O-bound service. Which approach would you choose for a service that consumes from an AWS SQS queue and writes to a database, and how would you deploy and scale it on Kubernetes?",
+          "purpose": "Assesses deep knowledge of Python's concurrency models, their practical application in a cloud-native context, and the ability to make sound architectural decisions considering performance, the GIL, and infrastructure.",
+          "follow_up": "How would you handle graceful shutdowns and ensure no messages are lost when a Kubernetes pod is terminated during scaling or a deployment?",
+          "red_flags": "Confusing threading with multiprocessing; unable to explain the Global Interpreter Lock (GIL) and its impact; generic answers without justifying choices in the context of AWS and Kubernetes.",
+          "category": "technical",
+          "seniority_level": "senior"
+        }
+      ],
+      "behavioral": [
+        {
+          "question": "Describe a time when you had a strong technical disagreement with a colleague or your manager about an architectural choice. How did you approach the disagreement, what was the process for reaching a resolution, and what was the final outcome?",
+          "purpose": "Evaluates communication, collaboration, and negotiation skills. It shows how the candidate handles conflict, whether they can argue their points constructively, and if they prioritize the project's success over being 'right'.",
+          "follow_up": "Looking back, is there anything you would have done differently to make the process smoother?",
+          "red_flags": "Blaming others; showing an inability to compromise or listen to other viewpoints; focusing on personal conflict rather than technical merits; having no examples of significant technical debates.",
+          "category": "behavioral",
+          "seniority_level": "senior"
+        }
+      ],
+      "system_design": [
+        {
+          "question": "Design a highly available and scalable system for processing and analyzing real-time clickstream data from a popular website. Walk me through the architecture from data ingestion to providing analytics dashboards, detailing your choice of AWS services and how you would deploy stateful and stateless components on Kubernetes.",
+          "purpose": "Assesses the ability to design a complex, distributed system from the ground up. It tests knowledge of event-driven architectures, data pipelines, scalability patterns, and the practical application of AWS services (e.g., Kinesis, Lambda, S3, Redshift) and Kubernetes concepts (e.g., Deployments, StatefulSets).",
+          "follow_up": "How would you ensure exactly-once processing for critical events, and what is your strategy for monitoring the cost of this system?",
+          "red_flags": "A monolithic design; not considering failure modes or data loss; hand-waving key components like data storage or message queues; inability to justify technology choices with clear trade-offs.",
+          "category": "system_design",
+          "seniority_level": "senior"
+        }
+      ],
+      "leadership": [
+        {
+          "question": "Tell me about a time you proactively identified a significant gap in your team's technical capabilities, processes, or code quality. What was the gap, what steps did you take to address it, and how did you influence your peers to adopt the change?",
+          "purpose": "Evaluates leadership, mentorship, and influence beyond individual contributions. Senior engineers are expected to elevate the entire team, drive best practices, and take ownership of the team's technical excellence.",
+          "follow_up": "How did you measure the impact of your initiative, and what was the most challenging part of getting buy-in from the team?",
+          "red_flags": "Having no examples of improving a team; suggesting changes but not driving their adoption; focusing only on their own code; a lack of awareness of team dynamics and processes.",
+          "category": "leadership",
+          "seniority_level": "senior"
+        }
+      ],
+      "debugging": [
+        {
+          "question": "You are on-call. An alert fires for a critical Python service running on Kubernetes in AWS. The P99 latency has spiked and there's a small but significant increase in 5xx errors. The issue is intermittent and there have been no recent deployments. What is your step-by-step process to debug this?",
+          "purpose": "Assesses a candidate's systematic approach to troubleshooting complex production issues in a distributed environment. It tests their knowledge of observability tools (metrics, logging, tracing), Kubernetes debugging commands, and their ability to reason under pressure.",
+          "follow_up": "Let's say you suspect the issue is not in the application code but is related to resource contention on the Kubernetes node. How would you investigate that hypothesis?",
+          "red_flags": "Jumping to conclusions without evidence; not having a structured approach (e.g., 'I'd restart it'); unfamiliarity with observability tools or `kubectl` for diagnostics; focusing only on application logs while ignoring infrastructure metrics.",
+          "category": "debugging",
+          "seniority_level": "senior"
+        }
+      ]
+    }
+  },
+  "audit_trail": {
+    "timestamp": "2025-10-15T08:30:35.256326",
+    "candidate": "Alex Chen",
+    "job": "Senior Backend Engineer",
+    "model_version": "v2.0",
+    "events": [
+      "Template selected",
+      "Career analyzed",
+      "Generated 5 questions",
+      "Identified 0 red flags",
+      "Skill match: 72.0%",
+      "Rubric confidence: 0.53"
+    ]
+  }
+}
